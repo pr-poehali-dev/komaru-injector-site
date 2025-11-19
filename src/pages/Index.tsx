@@ -391,6 +391,89 @@ const Index = () => {
           </div>
         </section>
 
+        <section className="container mx-auto px-4 py-24 bg-gradient-to-b from-transparent to-primary/5">
+          <div className="text-center mb-16 animate-fade-in">
+            <h3 className="text-4xl font-black mb-4 text-glow">
+              ОТЗЫВЫ ИГРОКОВ
+            </h3>
+            <p className="text-muted-foreground text-lg">
+              Что говорят пользователи KomaruExternal
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                name: "ProGamer2024",
+                rating: 5,
+                text: "Лучший чит для SO2! Использую уже 3 месяца, ни одного бана. ESP работает идеально, вижу всех через стены. Советую!",
+                avatar: "👾"
+              },
+              {
+                name: "DarkSniper",
+                rating: 5,
+                text: "Аимбот просто огонь! Настройки гибкие, можно сделать незаметным. Поддержка отвечает быстро. 10/10",
+                avatar: "🎯"
+              },
+              {
+                name: "CyberWarrior",
+                rating: 5,
+                text: "Топовый инжектор, все функции работают стабильно. No Recoil - просто космос. Обновления выходят регулярно.",
+                avatar: "⚡"
+              },
+              {
+                name: "ShadowHunter",
+                rating: 5,
+                text: "Пользуюсь 2 недели - полный восторг! Anti-Ban реально защищает. Играю спокойно на основном аккаунте.",
+                avatar: "🔥"
+              },
+              {
+                name: "NightKiller",
+                rating: 5,
+                text: "Очень простая установка, даже новичок справится. Чит работает стабильно, FPS не проседает. Рекомендую всем!",
+                avatar: "💀"
+              },
+              {
+                name: "StormBreaker",
+                rating: 5,
+                text: "За эти деньги (бесплатно!) это просто находка. Функционал как в платных читах. Респект разработчикам!",
+                avatar: "⚔️"
+              }
+            ].map((review, index) => (
+              <Card 
+                key={index}
+                className="p-6 bg-card border-border hover:border-primary transition-all duration-300 hover:glow-primary group"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-2xl glow-primary">
+                    {review.avatar}
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-lg group-hover:text-primary transition-colors">
+                      {review.name}
+                    </h4>
+                    <div className="flex gap-1 mt-1">
+                      {Array.from({ length: review.rating }).map((_, i) => (
+                        <Icon key={i} name="Star" size={14} className="text-secondary fill-secondary" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {review.text}
+                </p>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 border border-primary/30 rounded-full">
+              <Icon name="Users" size={20} className="text-primary" />
+              <span className="text-sm font-semibold">Присоединяйся к <span className="text-primary">50,000+</span> довольных игроков</span>
+            </div>
+          </div>
+        </section>
+
         <section className="container mx-auto px-4 py-24">
           <Card className="p-12 bg-gradient-to-br from-primary/10 to-accent/10 border-primary/50 glow-primary text-center">
             <div className="max-w-3xl mx-auto">
