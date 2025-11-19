@@ -218,6 +218,179 @@ const Index = () => {
           </div>
         </section>
 
+        <section className="container mx-auto px-4 py-24 bg-gradient-to-b from-transparent to-accent/5">
+          <div className="text-center mb-16 animate-fade-in">
+            <h3 className="text-4xl font-black mb-4 text-glow">
+              СИСТЕМНЫЕ ТРЕБОВАНИЯ
+            </h3>
+            <p className="text-muted-foreground text-lg">
+              Убедись, что твой ПК соответствует минимальным требованиям
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <Card className="p-8 bg-card border-primary/30 hover:glow-primary transition-all">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center">
+                  <Icon name="Check" size={24} className="text-secondary" />
+                </div>
+                <h4 className="text-2xl font-black text-secondary">Минимальные</h4>
+              </div>
+              <div className="space-y-4 text-sm">
+                <div className="flex items-start gap-3">
+                  <Icon name="Cpu" size={18} className="text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Процессор</p>
+                    <p className="text-muted-foreground">Intel Core i3 / AMD Ryzen 3</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="MemoryStick" size={18} className="text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Оперативная память</p>
+                    <p className="text-muted-foreground">4 GB RAM</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="HardDrive" size={18} className="text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Место на диске</p>
+                    <p className="text-muted-foreground">50 MB свободного места</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="MonitorSmartphone" size={18} className="text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Операционная система</p>
+                    <p className="text-muted-foreground">Windows 10 64-bit</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-card border-accent/30 hover:glow-accent transition-all">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
+                  <Icon name="Zap" size={24} className="text-accent" />
+                </div>
+                <h4 className="text-2xl font-black text-accent">Рекомендуемые</h4>
+              </div>
+              <div className="space-y-4 text-sm">
+                <div className="flex items-start gap-3">
+                  <Icon name="Cpu" size={18} className="text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Процессор</p>
+                    <p className="text-muted-foreground">Intel Core i5 / AMD Ryzen 5</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="MemoryStick" size={18} className="text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Оперативная память</p>
+                    <p className="text-muted-foreground">8 GB RAM</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="HardDrive" size={18} className="text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Место на диске</p>
+                    <p className="text-muted-foreground">100 MB свободного места</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="MonitorSmartphone" size={18} className="text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Операционная система</p>
+                    <p className="text-muted-foreground">Windows 11 64-bit</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 py-24">
+          <div className="text-center mb-16 animate-fade-in">
+            <h3 className="text-4xl font-black mb-4 text-glow">
+              ИНСТРУКЦИЯ ПО УСТАНОВКЕ
+            </h3>
+            <p className="text-muted-foreground text-lg">
+              Следуй простым шагам для запуска чита
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            {[
+              {
+                step: "01",
+                title: "Скачай инжектор",
+                description: "Нажми на кнопку 'Скачать KomaruExternal' и сохрани файл на свой компьютер",
+                icon: "Download"
+              },
+              {
+                step: "02",
+                title: "Отключи антивирус",
+                description: "Временно отключи Windows Defender и другие антивирусы для корректной работы",
+                icon: "ShieldOff"
+              },
+              {
+                step: "03",
+                title: "Запусти инжектор",
+                description: "Открой скачанный файл от имени администратора (правой кнопкой мыши)",
+                icon: "Play"
+              },
+              {
+                step: "04",
+                title: "Настрой функции",
+                description: "Выбери нужные функции в меню чита: ESP, Aimbot, No Recoil и другие",
+                icon: "Settings"
+              },
+              {
+                step: "05",
+                title: "Запусти Standoff 2",
+                description: "Открой игру и наслаждайся преимуществами. Чит активируется автоматически",
+                icon: "Gamepad2"
+              }
+            ].map((step, index) => (
+              <Card 
+                key={index}
+                className="p-6 bg-card border-border hover:border-primary transition-all duration-300 hover:glow-primary group"
+              >
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-primary group-hover:scale-110 transition-transform">
+                      <Icon name={step.icon} size={28} className="text-background" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-4xl font-black text-primary/30">{step.step}</span>
+                      <h4 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                        {step.title}
+                      </h4>
+                    </div>
+                    <p className="text-muted-foreground">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Card className="inline-block p-6 bg-accent/10 border-accent/30">
+              <div className="flex items-center gap-3">
+                <Icon name="AlertCircle" size={24} className="text-accent" />
+                <div className="text-left">
+                  <p className="font-semibold text-accent">Важно!</p>
+                  <p className="text-sm text-muted-foreground">Используй чит ответственно и на свой страх и риск</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
         <section className="container mx-auto px-4 py-24">
           <Card className="p-12 bg-gradient-to-br from-primary/10 to-accent/10 border-primary/50 glow-primary text-center">
             <div className="max-w-3xl mx-auto">
