@@ -3,6 +3,24 @@ import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
+  const screenshots = [
+    {
+      url: "https://cdn.poehali.dev/projects/4ba3c8b0-3f7d-4b91-b2a6-eadbccf069a0/files/65e69bbb-450e-4e91-9b97-54387b11baea.jpg",
+      title: "ESP Визуализация",
+      description: "Видимость противников через стены"
+    },
+    {
+      url: "https://cdn.poehali.dev/projects/4ba3c8b0-3f7d-4b91-b2a6-eadbccf069a0/files/d7efd61d-9d0b-413f-833e-a266ad2ac6de.jpg",
+      title: "Smart Aimbot",
+      description: "Автоматическое наведение на цель"
+    },
+    {
+      url: "https://cdn.poehali.dev/projects/4ba3c8b0-3f7d-4b91-b2a6-eadbccf069a0/files/b49ce9f6-6b63-4775-9995-a5342db02060.jpg",
+      title: "Настройки чита",
+      description: "Полный контроль над функциями"
+    }
+  ];
+
   const features = [
     {
       icon: "Eye",
@@ -130,6 +148,70 @@ const Index = () => {
                       {feature.description}
                     </p>
                   </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 py-24 bg-gradient-to-b from-transparent to-primary/5">
+          <div className="text-center mb-16 animate-fade-in">
+            <h3 className="text-4xl font-black mb-4 text-glow">
+              СМОТРИ В ДЕЙСТВИИ
+            </h3>
+            <p className="text-muted-foreground text-lg">
+              Видео демонстрация возможностей чита
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden border-primary/30 glow-primary">
+              <div className="aspect-video bg-card relative group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center group-hover:glow-primary transition-all group-hover:scale-110">
+                      <Icon name="Play" size={40} className="text-primary ml-1" />
+                    </div>
+                    <p className="text-xl font-bold text-primary">Смотреть демонстрацию</p>
+                    <p className="text-sm text-muted-foreground mt-2">Полный обзор всех функций</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 py-24">
+          <div className="text-center mb-16 animate-fade-in">
+            <h3 className="text-4xl font-black mb-4 text-glow">
+              СКРИНШОТЫ
+            </h3>
+            <p className="text-muted-foreground text-lg">
+              Реальные примеры работы инжектора
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
+            {screenshots.map((screenshot, index) => (
+              <Card 
+                key={index}
+                className="overflow-hidden border-border hover:border-primary transition-all duration-300 hover:glow-primary group cursor-pointer"
+              >
+                <div className="aspect-video relative overflow-hidden">
+                  <img 
+                    src={screenshot.url} 
+                    alt={screenshot.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+                </div>
+                <div className="p-4">
+                  <h4 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
+                    {screenshot.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {screenshot.description}
+                  </p>
                 </div>
               </Card>
             ))}
